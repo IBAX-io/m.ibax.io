@@ -1,0 +1,44 @@
+.dynamic {
+  background: url("../image/part_two_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  .main-btn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .main-text--other {
+    margin-bottom: 0.5rem;
+  }
+
+  &-top {
+    background: url("../image/8.png") no-repeat center;
+    background-size: 100% 100%;
+    padding: 1rem 20px;
+    .main-btn {
+      padding-bottom: 6rem;
+      padding-top: 1rem;
+    }
+  }
+  &-two {
+    padding: 20px;
+    .research-img img {
+      height: 5rem;
+    }
+    .research-img-one {
+      width: 80%;
+    }
+  }
+  .van-pagination__item {
+    background-color: transparent;
+    color: #999;
+    font-size: @text-size;
+    &:active {
+      background-color: @primary-color;
+      border-radius: 5px;
+    }
+  }
+  .van-pagination__item--active {
+    background-color: @primary-color;
+    border-radius: 5px;
+    color: #fff;
+  }
+}

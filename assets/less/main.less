@@ -1,0 +1,56 @@
+.main {
+  flex: auto;
+  &-h1 {
+    font-size: 1rem;
+    .h1-other();
+    .padding-20();
+    &--other {
+      font-size: 0.8rem;
+      .h1-other();
+      .padding-20();
+    }
+  }
+  &-h3 {
+    font-size: 0.3rem;
+    .h1-other();
+  }
+  &-h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    .h2-other();
+    &--other {
+      font-size: 0.6rem;
+      .h2-other();
+    }
+  }
+
+  &-spot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: @spot;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &-text {
+    color: @white;
+    margin-bottom: 0.5rem;
+    &--base {
+      color: @text-base;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &-btn {
+    text-align: center;
+  }
+}
+.h1-other {
+  margin: 0.5rem 0;
+  line-height: 1.3em;
+  color: @white;
+}
+.h2-other {
+  margin: 1rem 0 0.5rem 0;
+  line-height: 1.3em;
+  color: @text-base;
+}

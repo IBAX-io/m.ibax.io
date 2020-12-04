@@ -1,0 +1,45 @@
+.footer {
+  background-color: @footer-color;
+  padding-bottom: 1rem;
+  color: @white;
+  .padding-20();
+  &-getHub {
+    background: url("../image/github.png") no-repeat center;
+    background-size: 100% 100%;
+    width: 120px;
+    height: 35px;
+    display: inline-block !important;
+  }
+  a {
+    color: #c0c1c5;
+    font-size: 0.3rem;
+    display: block;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  .main-text {
+    .footer-text();
+  }
+  &-img {
+    align-items: center;
+    .footer-text();
+    img {
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-left: 0.2rem;
+    }
+    &-box {
+      margin-left: auto;
+    }
+  }
+  &-link {
+    a {
+      display: inline-block;
+    }
+  }
+}
+.footer-text {
+  color: #c0c1c5;
+  font-size: 0.3rem;
+}
