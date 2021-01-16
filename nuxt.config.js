@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-13 16:46:45
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:24:15
+ * @LastEditTime: 2021-01-15 18:39:41
  * @Description:nuxt*
  */
 let pattern = false;
@@ -28,36 +28,72 @@ console.log(pattern);
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "IBAX",
+    title: "IBAX Network",
     meta: [
       { charset: "utf-8" },
       {
         name: "viewport",
         content:
-          "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+          "width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
       },
-      { hid: "description", name: "description", content: "IBAX" },
-      { hid: "og:title", name: "og:title", content: "IBAX" },
+      { hid: "description", name: "description", content: "IBAX Network" },
+      { hid: "og:title", name: "og:title", content: "IBAX Network" },
       {
-        hid: "keyswords",
-        name: "keyswords",
+        hid: "ie",
+        "http-equiv": "X-UA-Compatible",
+        content: "IE=11; IE=10; IE=9; IE=8; IE=EDGE"
+      },
+      {
+        hid: "edge",
+        "http-equiv": "X-UA-Compatible",
+        content: "IE=edge,chrome=1"
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
         content:
-          "IBAX,CryptoCurrency,Bitcoin,Cross-Chain,Crypto,DeFi,Dapps,Blockchaintechnology,corelayertechnology,decentralizedapplication,Distributedledger,IBAXAMA"
+          "IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA"
       },
       {
         hid: "og:description",
         name: "og:description",
-        content: "IBAX"
-      },
-      {
-        hid: "og:site_name",
-        name: "og:site_name",
-        content: "IBAX"
+        content:
+          "IBAX is a blockchain infrastructural Network. It is running on our own chain and has Cross-chain solutions. IBAX is concentrated on solving problems that exist on Ethereum. We encourage developers to build their applications and establish a sustainable ecosystem."
       },
       {
         hid: "og:type",
         name: "og:type",
-        content: "IBAX"
+        content: "IBAX Network"
+      },
+      {
+        hid: "og:url",
+        name: "og:url",
+        content: "https://ibax.io"
+      },
+      {
+        hid: "url",
+        name: "url",
+        content: "https://ibax.io"
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "A Decentralized Blockchain Infrastructural Network"
+      },
+      {
+        hid: "twitter:site",
+        name: "twitter:site",
+        content: "@IbaxNetwork"
+      },
+      {
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@IbaxNetwork"
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "IBAX Network"
       }
     ],
     link: [
@@ -66,7 +102,11 @@ export default {
     ],
     script: [
       { type: "text/javascript", src: "/js/flexible.js" },
-      { type: "text/javascript", src: "/js/requestNextAnimationFrame.js" }
+      { type: "text/javascript", src: "/js/requestNextAnimationFrame.js" },
+      {
+        async: "async",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-3P74G75LD1"
+      }
     ]
   },
 
@@ -92,7 +132,7 @@ export default {
   },
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    // { src: "~/plugins/nutui.js", mode: "client" },
+    { src: "@/plugins/analytics.js", ssr: false },
     "@/plugins/vuescroll",
     "@/plugins/vant.js",
     "@/plugins/i18n.js"
@@ -123,21 +163,8 @@ export default {
     "@nuxtjs/pwa",
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    "@nuxtjs/style-resources",
-    "@nuxtjs/google-gtag"
+    "@nuxtjs/style-resources"
   ],
-  "google-gtag": {
-    id: "G-3P74G75LD1",
-    config: {
-      anonymize_ip: true, // anonymize IP
-      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
-      linker: {
-        domains: ["ibax.io", "m.ibax.io"]
-      }
-    },
-    debug: true, // enable to track in dev mode
-    disableAutoPageTrack: true // disable if you don't want to track each page route
-  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 

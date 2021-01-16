@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:23:13
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:51:22
+ * @LastEditTime: 2021-01-15 17:10:50
  * @Description: footer
 -->
 <template>
@@ -21,13 +21,19 @@
       <van-col span="12">
         <h3 class="main-h3">INTRODUCTION</h3>
         <a
+          href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
+          target="_blank"
+        >
+          White Paper
+        </a>
+        <!--  <a
           href="https://ibax.io/IBAX%20Public%20Network%20Whitepaper%20V1.0.pdf"
           target="_blank"
           >White Paper</a
-        >
+        > -->
       </van-col>
       <van-col span="12">
-        <h3 class="main-h3">TECHNOLOGY RESEARCH</h3>
+        <h3 class="main-h3">RESEARCH</h3>
         <nuxt-link :to="{ name: 'research' }">Cross-chain</nuxt-link>
         <nuxt-link :to="{ name: 'research' }">DeFi</nuxt-link>
         <nuxt-link :to="{ name: 'research' }">Anonymous transaction</nuxt-link>
@@ -36,17 +42,17 @@
     </van-row>
     <van-row type="flex">
       <van-col span="12">
-        <h3 class="main-h3">COMMUNITY ACTIVITY</h3>
-        <a href="https://github.com/ibax-io" target="_blank">Call for prizes</a>
-        <a href="https://github.com/ibax-io" target="_blank"
-          >Technical contribution</a
-        >
-        <a href="https://github.com/ibax-io" target="_blank">Quiz</a>
+        <h3 class="main-h3">COMMUNITY EVENTS</h3>
+        <a href="https://github.com/ibax-io" target="_blank">Awards</a>
+        <a href="https://github.com/ibax-io" target="_blank">Contribution</a>
+        <a href="https://github.com/ibax-io" target="_blank">Knowledge Base</a>
       </van-col>
       <van-col span="12">
         <h3 class="main-h3">OPEN SOURCE</h3>
-        <a href="https://ibax.gitbook.io" target="_blank">Open document</a>
-        <a href="https://ibax.gitbook.io" target="_blank">Open source</a>
+        <a href="https://ibax.gitbook.io/docs/" target="_blank"
+          >Open Documentation</a
+        >
+        <a href="https://github.com/ibax-io" target="_blank">Open Source</a>
       </van-col>
     </van-row>
     <p class="main-text">{{ $t("declaration.this") }}</p>
@@ -56,7 +62,7 @@
       <div class="footer-link">
         <span>Email：support@ibax.io</span>
         <span class="footer-img-box">
-          <a href=" https://www.facebook.com/ibaxproject/" target="_blank">
+          <a href="https://www.facebook.com/IBAXNetwork/" target="_blank">
             <img src="../assets/image/facebook.png" alt="facebook"
           /></a>
           <a href="https://twitter.com/IbaxNetwork" target="_blank">

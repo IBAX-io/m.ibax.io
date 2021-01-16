@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:20:22
  * @LastEditors: abc
- * @LastEditTime: 2020-11-18 10:18:41
+ * @LastEditTime: 2020-12-19 17:40:49
  * @Description: 
 -->
 <template>
@@ -18,7 +18,7 @@
       :class="{ 'header-width': isAside }"
       @click="handleisAside"
     >
-      <div class="header-aside-content">
+      <div v-show="isAside" class="header-aside-content">
         <div class="header-aside-top">
           <div class="header-aside-top-icon" @click="handleisAside"></div>
         </div>

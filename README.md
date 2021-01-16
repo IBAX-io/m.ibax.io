@@ -1,6 +1,4 @@
-# m.ibax.io
-
-## This is a mobile official website
+# wapMobile interface of official website
 
 ## Build Setup
 

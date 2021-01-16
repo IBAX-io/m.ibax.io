@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-13 16:46:45
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:51:12
+ * @LastEditTime: 2021-01-15 18:59:25
  * @Description: home
 -->
 <template>
@@ -21,15 +21,24 @@
         <h2 class="main-h2">
           {{ $t("whitePaper") }}<span class="main-spot"></span>
         </h2>
-        <p class="main-text--base padding-20">{{ $t("declaration.four") }}</p>
+        <p
+          class="main-text--base padding-20"
+          v-html="$t('declaration.four')"
+        ></p>
         <!--  <p class="main-text--base padding-20">{{ $t("declaration.five") }}</p> -->
         <div class="main-btn">
           <a
-            href="https://ibax.io/IBAX%20Public%20Network%20Whitepaper%20V1.0.pdf"
+            href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
             target="_blank"
             class="openSource"
             >{{ $t("learnMor") }}</a
           >
+          <!--   <a
+            href="https://ibax.io/IBAX%20Public%20Network%20Whitepaper%20V1.0.pdf"
+            target="_blank"
+            class="openSource"
+            >{{ $t("learnMor") }}</a
+          > -->
         </div>
       </div>
       <div class="home-three">
@@ -100,6 +109,9 @@
           {{ $t("Cross-chain + DeFi") }}<span class="main-spot"></span>
         </h2>
         <p class="main-text--base padding-20">
+          {{ $t("decentralized") }}
+        </p>
+        <p class="main-text--base padding-20">
           {{ $t("declaration.concept") }}
         </p>
         <p class="main-text--base padding-20">{{ $t("declaration.world") }}</p>
@@ -107,11 +119,7 @@
           {{ $t("declaration.explore") }}
         </p>
         <div class="main-btn">
-          <nuxt-link
-            :to="{ name: 'openSource' }"
-            class="openSource"
-            style="border: none; text-decoration: underline"
-          >
+          <nuxt-link :to="{ name: 'openSource' }" class="openSource">
             {{ $t("challenge") }}
           </nuxt-link>
         </div>
@@ -128,6 +136,9 @@
         <h1 class="main-h1--other">
           {{ $t("ibaxValue") }}<span class="main-spot"></span>
         </h1>
+        <p class="main-text padding-20">
+          {{ $t("richEcosystem") }}
+        </p>
         <p class="main-text padding-20">{{ $t("declaration.fast") }}</p>
         <p class="main-text padding-20">{{ $t("declaration.simple") }}</p>
         <p class="main-text padding-20">{{ $t("declaration.consensus") }}</p>
@@ -217,14 +228,7 @@ export default {
     };
   },
   created() {},
-  mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
-  },
+  mounted() {},
   methods: {
     /*  handleValue(value) {
       this.$store.commit("SET_LANG", value);
@@ -253,12 +257,19 @@ export default {
   },
   head() {
     return {
-      title: "IBAX",
+      title: "IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX"
+          content:
+            "IBAX is a blockchain infrastructural Network. It is running on our own chain and has Cross-chain solutions. IBAX is concentrated on solving problems that exist on Ethereum. We encourage developers to build their applications and establish a sustainable ecosystem."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "IBAX is a blockchain infrastructural Network. It is running on our own chain and has Cross-chain solutions. IBAX is concentrated on solving problems that exist on Ethereum. We encourage developers to build their applications and establish a sustainable ecosystem."
         }
       ]
     };

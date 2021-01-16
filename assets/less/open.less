@@ -106,13 +106,26 @@
       padding: 20px;
     }
   }
+  .van-tabs__wrap {
+    overflow-x: auto;
+    height: auto;
+  }
   .van-tabs__nav {
     background: transparent;
+    overflow-x: auto;
+    display: flex;
   }
   .van-tab {
     background-color: rgba(#ffddba, 0.55);
     border-radius: 10px;
     margin: 0 20px;
+    -webkit-box-flex: 0;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    flex: 0 0 auto;
   }
   .van-tabs__line {
     display: none;

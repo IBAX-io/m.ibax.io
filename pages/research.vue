@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2020-11-17 16:45:08
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:26:20
+ * @LastEditTime: 2020-12-21 18:37:40
  * @Description: research
 -->
 <template>
   <div class="research">
     <div class="research-part">
       <h1 class="main-h1--other">
-        Technology has no end,just eternal exploration.
+        Technology has no end, just eternal exploration.
       </h1>
       <p class="main-text research-img-padding">
         The truth seeking never stops.
@@ -103,23 +103,23 @@ export default {
   computed: {},
   watch: {},
   created() {},
-  mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
-  },
+  mounted() {},
   methods: {},
   head() {
     return {
-      title: "IBAX-Research Center",
+      title: "Research Center | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Research Center"
+          content:
+            "The technical difficulties that the IBAX team is studying  would bring great changes to the IBAX network."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "The technical difficulties that the IBAX team is studying  would bring great changes to the IBAX network."
         }
       ]
     };

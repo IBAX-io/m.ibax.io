@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:44:11
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:26:12
+ * @LastEditTime: 2021-01-15 17:11:31
  * @Description: openSource
 -->
 <template>
@@ -81,9 +81,10 @@
       <!-- part one  -->
       <div class="open-part">
         <h1 class="main-h2--other">
-          {{ $t("location") }}
+          {{ $t("configuration") }}
         </h1>
-        <p class="main-text--base">* Platform parameter configuration</p>
+        <p class="main-text--base">*{{ $t("location") }}</p>
+        <p class="main-text--base">Platform parameter configuration</p>
         <p class="main-text--base">* Blockchain network configuration</p>
         <p class="main-text--base">New ecoLib configuration</p>
         <p class="main-text--base">Database configuration</p>
@@ -112,6 +113,7 @@
         <p class="main-text--base">* Certified interfaces</p>
         <p class="main-text--base">* Server command interface</p>
         <p class="main-text--base">* Data request function interface</p>
+        <p class="main-text--base">Indicator interface acquisition</p>
         <p class="main-text--base">* ecoLib interface</p>
         <p class="main-text--base">* Contract function interface</p>
         <div class="open-link">
@@ -150,29 +152,27 @@
     <h1 class="main-h1--other padding-20">
       Functions of Weaver<span class="main-spot"></span>
     </h1>
-    <van-tabs class="open-tabs">
-      <van-tab
-        v-for="(item, index) in arrTabs"
-        :key="index"
-        :title="item.label"
-      >
-        <div class="padding-20 open-tabs-box">
-          <div class="open-tabs-content">
-            <h1 class="main-h2--other">
-              {{ item.title }}
-            </h1>
-            <p class="main-text--base">
-              {{ $t("declaration.using") }}
-            </p>
-            <p class="main-text--base">
-              {{ $t("declaration.dao") }}
-            </p>
-            <p class="open-img">
-              <img :src="item.img" />
-            </p>
+    <van-tabs class="open-tabs" swipeable>
+      <template v-for="item in arrTabs">
+        <van-tab :key="item.key">
+          <div slot="title">
+            {{ item.label }}
           </div>
-        </div>
-      </van-tab>
+          <div class="padding-20 open-tabs-box">
+            <div class="open-tabs-content">
+              <h1 class="main-h2--other">
+                {{ item.title }}
+              </h1>
+              <p class="main-text--base">{{ $t(item.text1) }}</p>
+              <p class="main-text--base">{{ $t(item.text2) }}</p>
+              <p class="main-text--base">{{ $t(item.text3) }}</p>
+              <p class="open-img">
+                <img :src="item.img" />
+              </p>
+            </div>
+          </div>
+        </van-tab>
+      </template>
     </van-tabs>
     <div class="open-bottom">
       <h1 class="main-h1--other">
@@ -203,7 +203,7 @@ import role from "../assets/image/3.png";
 import creation from "../assets/image/4.png";
 import voting from "../assets/image/5.png";
 import one from "../assets/image/related_one.png";
-import two from "../assets/image/related_two.png";
+import two from "../assets/image/eth.jpg";
 import three from "../assets/image/related_three.png";
 import four from "../assets/image/related_four.png";
 import five from "../assets/image/related_five.png";
@@ -291,16 +291,6 @@ export default {
             "To ensure the ecoLib fairness, the basic ecoLib parameters can only be changed after more than 50% of ecoLib members vote for it.",
           text2: "",
           img: voting
-        },
-        {
-          key: 1,
-          label: "Create EcoLib",
-          title: "How to Create a New ecoLib?",
-          text1:
-            "EcoLib creation is fast with LESS. The creator has all the management permissions.",
-          text2:
-            "P.S. We have been researching DAO. ecoLib management by its members is just around the corner.",
-          img: ecoLib
         }
       ]
     };
@@ -308,14 +298,7 @@ export default {
   computed: {},
   watch: {},
   created() {},
-  mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
-  },
+  mounted() {},
   methods: {
     handleTouchstart(key) {
       const arrImg = this.arrImg.map((item, index) => {
@@ -331,12 +314,19 @@ export default {
   },
   head() {
     return {
-      title: "IBAX-Open Source",
+      title: "Open Source | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Open Source"
+          content:
+            "IBAX opens up technical code based on the principle of sharing and open. We hope to explore with all communities in blockchain together and seek more innovative technologies."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "IBAX opens up technical code based on the principle of sharing and open. We hope to explore with all communities in blockchain together and seek more innovative technologies."
         }
       ]
     };

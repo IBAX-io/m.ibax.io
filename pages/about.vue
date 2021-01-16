@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:42:32
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:25:47
+ * @LastEditTime: 2020-12-21 18:45:16
  * @Description: about
 -->
 <template>
@@ -33,7 +33,7 @@
     <div class="about-two">
       <h2 class="main-h2">We Are Hiring</h2>
       <p class="main-text--base about-text-color">
-        You may not be perfect now, but join us so we can be greater together!
+        You may not be perfect now, but join us so we can be greater together !
       </p>
       <h2 class="main-h2--other">Blockchain Expert</h2>
       <h3 class="about-h3">{{ $t("declaration.interested") }}</h3>
@@ -149,7 +149,7 @@
         </van-tabs>
       </div>
     </div>
-    <div class="about-four">
+    <div class="about-four" style="display: none">
       <p class="main-text--base">Email：support@ibax.io</p>
       <p class="main-text--base">
         You can follow us or get in touch with us through these ways
@@ -226,23 +226,21 @@ export default {
   computed: {},
   watch: {},
   created() {},
-  mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
-  },
+  mounted() {},
   methods: {},
   head() {
     return {
-      title: "IBAX-About Us",
+      title: "About Us | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-About Us"
+          content: "Welcome to join us and Let's grow together."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Welcome to join us and Let's grow together."
         }
       ]
     };

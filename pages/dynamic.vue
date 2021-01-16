@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:43:30
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:25:55
+ * @LastEditTime: 2020-12-21 17:34:03
  * @Description: dynamic
 -->
 <template>
@@ -49,14 +49,14 @@
       <div style="display: none">
         <h2 class="main-h2">Latest Updates</h2>
         <p class="main-text--other">
-          {{ $t("declaration.ibaa") }}
+          {{ $t("declaration.won") }}
         </p>
         <p class="main-text--other">2020-3-21</p>
         <div class="research-img">
           <img src="../assets/image/one-1.png" alt="one-1" />
         </div>
         <p class="main-text--other">
-          {{ $t("declaration.ibaa") }}
+          {{ $t("declaration.won") }}
         </p>
         <p class="main-text--other">2020-3-21 From: phoenix.com</p>
         <van-row type="flex">
@@ -73,7 +73,7 @@
         </van-row>
         <p class="main-text--other">{{ $t("declaration.lorem") }}</p>
         <p class="main-text--other">
-          {{ $t("declaration.ibaa") }}
+          {{ $t("declaration.won") }}
         </p>
         <p class="main-text--other">2020-3-21 From: phoenix.com</p>
         <div class="research-img">
@@ -109,23 +109,21 @@ export default {
   computed: {},
   watch: {},
   created() {},
-  mounted() {
-    if (process.browser) {
-      this.$gtag("config", "G-3P74G75LD1", {
-        page_title: this.$metaInfo.title,
-        page_path: this.$route.fullPath
-      });
-    }
-  },
+  mounted() {},
   methods: {},
   head() {
     return {
-      title: "IBAX-Information",
+      title: "Information | IBAX Network",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "IBAX-Information"
+          content: "You can learn more about IBAX network, Please stay tuned."
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "You can learn more about IBAX network, Please stay tuned."
         }
       ]
     };
