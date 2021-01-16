@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:44:11
  * @LastEditors: abc
- * @LastEditTime: 2021-01-15 17:11:31
+ * @LastEditTime: 2021-01-16 11:57:06
  * @Description: openSource
 -->
 <template>
@@ -60,7 +60,7 @@
           <van-col span="12">
             <h2 class="main-h2--other padding-20">
               <span>SHA256 </span>
-              <span style="margin-left: auto">&</span>
+              <!-- <span style="margin-left: auto">&</span> -->
             </h2>
             <p class="main-text--base padding-20">
               {{ $t("declaration.generation") }}
@@ -84,7 +84,10 @@
           {{ $t("configuration") }}
         </h1>
         <p class="main-text--base">*{{ $t("location") }}</p>
-        <p class="main-text--base">Platform parameter configuration</p>
+        <p class="main-text--base">
+          {{ $t("parameter") }}
+        </p>
+        <p class="main-text--base">* Platform parameter configuration</p>
         <p class="main-text--base">* Blockchain network configuration</p>
         <p class="main-text--base">New ecoLib configuration</p>
         <p class="main-text--base">Database configuration</p>
