@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:23:13
  * @LastEditors: abc
- * @LastEditTime: 2021-01-15 17:10:50
+ * @LastEditTime: 2021-06-03 19:33:23
  * @Description: footer
 -->
 <template>
@@ -21,7 +21,7 @@
       <van-col span="12">
         <h3 class="main-h3">INTRODUCTION</h3>
         <a
-          href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
+          href="https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf"
           target="_blank"
         >
           White Paper

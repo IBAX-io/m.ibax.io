@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-13 16:46:45
  * @LastEditors: abc
- * @LastEditTime: 2021-01-15 18:59:25
+ * @LastEditTime: 2021-06-03 19:33:34
  * @Description: home
 -->
 <template>
@@ -28,7 +28,7 @@
         <!--  <p class="main-text--base padding-20">{{ $t("declaration.five") }}</p> -->
         <div class="main-btn">
           <a
-            href="https://ibax.io/IBAX_Public_Network_Whitepaper_V_1_0.pdf"
+            href="https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf"
             target="_blank"
             class="openSource"
             >{{ $t("learnMor") }}</a
