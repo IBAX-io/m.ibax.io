@@ -1,0 +1,115 @@
+.home {
+  &-img {
+    margin: 0.5rem 20px 0.5rem 20px;
+    &--img {
+      width: 100%;
+      height: 10rem;
+      display: block;
+    }
+    &--other {
+      width: 100%;
+      height: 5rem;
+      display: block;
+    }
+  }
+  &-box {
+    background: url("../image/part_two.png") no-repeat center 2rem;
+    background-size: 100% 100%;
+  }
+  &-two {
+    width: 100%;
+    background: url("../image/part_one.png") no-repeat center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+  }
+  &-three {
+    .padding-20();
+    &-title {
+      font-size: 20px;
+      color: @white;
+      line-height: 2em;
+      margin: 0.2rem 0;
+    }
+    &-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .circle {
+      width: 150px;
+      height: 70px;
+      border-radius: 100px 100px 0 0;
+      line-height: 100px;
+      transform: rotate(224deg);
+      background-color: @cricle;
+    }
+    .circle1 {
+      width: 80px;
+      height: 120px;
+      border: 35px solid @cricle;
+      border-radius: 0 100% 100% 0;
+      transform: rotate(24deg);
+      border-left: none;
+    }
+    .circle2 {
+      width: 110px;
+      height: 110px;
+      background-color: @cricle;
+      border-radius: 50%;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(@primary-color, 1);
+        border-radius: 50%;
+        display: block;
+      }
+    }
+    .circle3 {
+      width: 0;
+      height: 0;
+      border: 60px solid;
+      transform: rotate(84deg);
+      margin-left: 30px;
+      border-color: transparent transparent @cricle;
+    }
+    .circle4 {
+      width: 120px;
+      height: 30px;
+      transform: rotate(24deg);
+      background-color: @cricle;
+    }
+    .circle5 {
+      width: 60px;
+      height: 60px;
+      transform: rotate(45deg);
+      background-color: @cricle;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #244134;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+    }
+  }
+  &-four {
+    background: url("../image/part_three2.png") no-repeat center;
+    background-size: 100% 100%;
+    padding: 0.1rem 0 1rem 0;
+  }
+  &-six {
+    background: url("../image/part_five.png") no-repeat center;
+    background-size: 100% 100%;
+    padding: 0.1rem 0 1rem 0;
+  }
+}
