@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:42:32
  * @LastEditors: abc
- * @LastEditTime: 2021-08-02 12:06:46
+ * @LastEditTime: 2021-08-02 16:09:56
  * @Description: about
 -->
 <template>
@@ -151,7 +151,7 @@
             <img :src="objCeo.img" alt="ceo-1" />
           </div>
           <div class="about-three-right">
-            <div class="about-three-top">123</div>
+            <div class="about-three-top"></div>
             <div class="about-three-bottom">
               <h4 class="about-three-right-title">Personal introduction</h4>
               <p class="about-three-right-text">{{ objCeo.text }}</p>
