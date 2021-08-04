@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:42:32
  * @LastEditors: abc
- * @LastEditTime: 2021-08-02 16:09:56
+ * @LastEditTime: 2021-08-04 11:10:36
  * @Description: about
 -->
 <template>
@@ -151,7 +151,9 @@
             <img :src="objCeo.img" alt="ceo-1" />
           </div>
           <div class="about-three-right">
-            <div class="about-three-top"></div>
+            <div class="about-three-top">
+              <img :src="objCeo.card" alt="ceo-1" />
+            </div>
             <div class="about-three-bottom">
               <h4 class="about-three-right-title">Personal introduction</h4>
               <p class="about-three-right-text">{{ objCeo.text }}</p>
@@ -254,17 +256,20 @@ export default {
         {
           name: "Stuart Nichols (CEO)",
           img: require("../assets/image/ceo-1.png"),
+          card: require("../assets/image/ceo-1-1.png"),
           text: this.$t("stuart"),
           isActive: true
         },
         {
           name: "Alan McIvor (COO)",
           img: require("../assets/image/ceo-2.png"),
+          card: require("../assets/image/ceo-2-1.png"),
           text: this.$t("alan"),
           isActive: false
         },
         {
           name: "Simon Hemmrich (Senior Consultant)",
+          card: require("../assets/image/ceo-3-1.png"),
           img: require("../assets/image/ceo-3.png"),
           text: this.$t("simon"),
           isActive: false
@@ -272,13 +277,13 @@ export default {
       ],
       objCeo: {
         name: "XXX（CEO）",
-        card: require("../assets/image/ceo-2-1.jpg"),
+        card: require("../assets/image/ceo-1-1.png"),
         img: require("../assets/image/ceo-1.png"),
         text: this.$t("stuart"),
         isActive: true
       },
       objStyle: {
-        bottom: "-0.2rem"
+        bottom: "-0.8rem"
       },
       i: 0,
       timer: null
