@@ -1,4 +1,4 @@
-# wapMobile interface of official website
+# Mobile interface of official website
 
 ## Build Setup
 
