@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:42:32
  * @LastEditors: abc
- * @LastEditTime: 2021-08-04 11:10:36
+ * @LastEditTime: 2021-08-04 15:54:07
  * @Description: about
 -->
 <template>
@@ -283,7 +283,7 @@ export default {
         isActive: true
       },
       objStyle: {
-        bottom: "-0.8rem"
+        bottom: "-0.4rem"
       },
       i: 0,
       timer: null
@@ -310,7 +310,7 @@ export default {
       this.objCeo = this.arrCeo[index];
       if (index === 0) {
         this.objStyle = {
-          bottom: "-0.8rem"
+          bottom: "-0.4rem"
         };
       } else if (index === 1) {
         this.objStyle = {

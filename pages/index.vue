@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-13 16:46:45
  * @LastEditors: abc
- * @LastEditTime: 2021-07-30 16:31:07
+ * @LastEditTime: 2021-08-04 15:36:22
  * @Description: home
 -->
 <template>
@@ -50,7 +50,6 @@
             webkit-playsinline="true"
             x5-playsinline="true"
             controls
-            muted
             playsinline="true"
             poster="/video/poster.jpg"
             class="video-content"
