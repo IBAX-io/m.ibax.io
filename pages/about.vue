@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-11-17 16:42:32
  * @LastEditors: abc
- * @LastEditTime: 2021-08-04 15:54:07
+ * @LastEditTime: 2021-08-04 19:18:33
  * @Description: about
 -->
 <template>
@@ -151,7 +151,7 @@
             <img :src="objCeo.img" alt="ceo-1" />
           </div>
           <div class="about-three-right">
-            <div class="about-three-top">
+            <div class="about-three-top" @click="handleCard">
               <img :src="objCeo.card" alt="ceo-1" />
             </div>
             <div class="about-three-bottom">
@@ -245,6 +245,19 @@
         </van-col>
       </van-row>
     </div>
+    <van-dialog
+      v-model="show"
+      width="95%"
+      :show-cancel-button="false"
+      :show-confirm-button="false"
+    >
+      <div class="about-close" @click="handleCancel">
+        <van-icon name="cross" size="25" color="#333" />
+      </div>
+      <div class="about-dialog">
+        <img :src="objCeo.card" alt="card" />
+      </div>
+    </van-dialog>
   </div>
 </template>
 <script>
@@ -252,6 +265,7 @@ export default {
   props: {},
   data() {
     return {
+      show: false,
       arrCeo: [
         {
           name: "Stuart Nichols (CEO)",
@@ -299,6 +313,14 @@ export default {
     clearTimeout(this.timer);
   },
   methods: {
+    handleCancel() {
+      this.show = false;
+      this.handleLoop();
+    },
+    handleCard() {
+      this.show = true;
+      clearTimeout(this.timer);
+    },
     handleActive(index) {
       this.arrCeo.map((item, i) => {
         item.isActive = false;
